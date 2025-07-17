@@ -440,17 +440,18 @@ abstract contract ERC20 is Context, IERC20, IERC20Errors {
 
 
 // File : ImFact contract 
+
 contract ImFACT is ERC20 {
 
     address private immutable _owner;
-    string private constant _name = 'ImFact';
-    string private constant _symbol = 'IMFACT';
-    uint8 private constant _decimals = 18;
-    uint256 private constant _initialSupply = 5_000_000_000 * (10 ** uint256(_decimals));
+    string private constant TOKEN_NAME = 'ImFact';
+    string private constant TOKEN_SYMBOL = 'IMFACT';
+    uint8 private constant TOKEN_DECIMAL = 18;
+    uint256 private constant INITIAL_SUPPLY = 5_000_000_000 * (10 ** uint256(TOKEN_DECIMAL));
 
     constructor(address _init) {
         _owner = _msgSender();
-        super._mint(_init, _initialSupply);
+        super._mint(_init, INITIAL_SUPPLY);
     }
     
     /**
@@ -464,14 +465,14 @@ contract ImFACT is ERC20 {
      * @dev Returns the name of the token.
      */
     function name() public pure returns (string memory) {
-        return _name;
+        return TOKEN_NAME;
     }
 
     /**
      * @dev Returns the symbol of the token, usually a shorter version of the name.
      */
     function symbol() public pure returns (string memory) {
-        return _symbol;
+        return TOKEN_SYMBOL;
     }
 
     /**
@@ -488,6 +489,6 @@ contract ImFACT is ERC20 {
      * {IERC20-balanceOf} and {IERC20-transfer}.
      */
     function decimals() public pure returns (uint8) {
-        return _decimals;
+        return TOKEN_DECIMAL;
     }
 }
