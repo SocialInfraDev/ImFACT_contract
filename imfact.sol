@@ -442,7 +442,7 @@ abstract contract ERC20 is Context, IERC20, IERC20Errors {
 // File : ImFact contract 
 contract ImFACT is ERC20 {
 
-    address private _owner;
+    address private immutable _owner;
     string private constant _name = 'ImFact';
     string private constant _symbol = 'IMFACT';
     uint8 private constant _decimals = 18;
