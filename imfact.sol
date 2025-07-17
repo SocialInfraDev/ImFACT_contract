@@ -446,7 +446,7 @@ contract ImFACT is ERC20 {
     string private constant _name = 'ImFact';
     string private constant _symbol = 'IMFACT';
     uint8 private constant _decimals = 18;
-    uint256 private constant _initialSupply = 5000000000 * (10 ** uint256(_decimals));
+    uint256 private constant _initialSupply = 5_000_000_000 * (10 ** uint256(_decimals));
 
     constructor(address _init) {
         _owner = _msgSender();
