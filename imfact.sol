@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Unlicense
-pragma solidity 0.8.20;
+pragma solidity 0.8.24;
 
 
 // File : OpenZeppelin Contracts (last updated v5.0.1) (npm/@openzeppelin/contract/utils/Context.sol)
